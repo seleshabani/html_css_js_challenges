@@ -38,7 +38,26 @@ a{
     color: var(--almost-white);
 }
 
+/* mobile menu */
+/* .mobile-icon{
+    display: none;
+}
+
+
+.mobile-menu{
+    display: none;
+} */
 /* ================================NAVBAR========================== */
+
+.mobile-icon-container {
+    width: 25px;
+    display: none;
+}
+ 
+.mobile-icon {
+    width: 100%;
+}
+
 nav{
     height: 80px;
     display: flex;
@@ -85,8 +104,8 @@ nav .logins .logins__item{
 }
 
 .container .content-left{
-    width: 50%;
     display: flex;
+    flex: 1;
     flex-direction: column;
     align-content: center;
     align-items: center;
@@ -117,9 +136,50 @@ nav .logins .logins__item{
 }
 /* on rempli la parte droite avec l'image */
 .container .content-right{
-    width: 50%;
+    flex: 1;
     background-image: url(../images/image-hero-desktop.png);
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: center;
+    /* background-position: center; */
+}
+
+@media only screen and (max-width: 600px){
+    .menu {
+        display: none;
+    }
+    
+    /* nav {
+        display: none;
+    } */
+    .mobile-icon-container {
+        display: block;
+    }
+    
+    .mobile-icon{
+        display: block;
+    }
+    p{
+        font-size: 18px;
+        color: var(--almost-black);
+        align-items: center;
+    }
+    a{
+        display: none;
+
+    }
+
+    .link{
+        display: none;
+    }
+    
+    .link__black{
+        background-color: var(--almost-black);
+        color: var(--almost-white);
+        align-items: center;
+    }
+
+    .container{
+        flex-direction: column-reverse;
+    }
+
 }
